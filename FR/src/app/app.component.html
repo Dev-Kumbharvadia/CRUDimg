@@ -1,0 +1,29 @@
+<div class="container">
+  <h1>Image Upload and Management</h1>
+
+  <!-- Image Display Section -->
+  <div class="image-card" *ngIf="imageUrl">
+    <h3>Uploaded Image</h3>
+    <img [src]="imageUrl" alt="Uploaded Image" class="uploaded-image" />
+    <div class="actions">
+      <button class="btn" (click)="onUpdate()">Update</button>
+      <button class="btn delete" (click)="onDelete()">Delete</button>
+    </div>
+  </div>
+
+  <!-- File Upload Section -->
+  <div class="upload-card">
+    <h3>Upload a New Image</h3>
+    <input type="file" (change)="onFileSelected($event)" />
+    <button class="btn upload-btn" (click)="onUpload()" [disabled]="!selectedFile">Upload</button>
+
+    <div *ngIf="uploading" class="progress">Uploading...</div>
+
+    <p>{{ uploadResult }}</p>
+  </div>
+
+  @for (image of images; track $index) {
+    <img [src]="'data:image/png;base64,' + image.fileContent" style="height: 100px;" alt="Image {{ $index + 1 }}">
+  }
+
+</div>

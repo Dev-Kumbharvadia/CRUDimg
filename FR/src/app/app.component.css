@@ -1,0 +1,90 @@
+/* Container for the entire app */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 2em;
+    margin-bottom: 30px;
+  }
+  
+  /* Style for the image card (display image after upload) */
+  .image-card {
+    border: 2px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    max-width: 500px;
+    margin: 0 auto 20px;
+  }
+  
+  .uploaded-image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+  
+  .actions {
+    margin-top: 10px;
+  }
+  
+  .actions .btn {
+    padding: 8px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .actions .btn.delete {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  .actions .btn.upload-btn {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .actions .btn:hover {
+    opacity: 0.8;
+  }
+  
+  /* Style for upload section */
+  .upload-card {
+    border: 2px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .upload-card input[type="file"] {
+    margin: 10px 0;
+  }
+  
+  .upload-card button[disabled] {
+    background-color: #ddd;
+    cursor: not-allowed;
+  }
+  
+  .progress {
+    margin-top: 10px;
+    color: #2196F3;
+  }
+  
+  /* General responsiveness */
+  @media (max-width: 600px) {
+    .container {
+      width: 90%;
+    }
+  
+    .image-card, .upload-card {
+      width: 100%;
+    }
+  }
+  
